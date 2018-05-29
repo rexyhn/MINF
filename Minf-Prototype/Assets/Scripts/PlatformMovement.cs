@@ -22,7 +22,12 @@ public class PlatformMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Vector3 pos = Camera.main.transform.position;
+        float distance = pos.magnitude;
+        Debug.Log(distance);
+        platformSpeed = distance * 0.1f;
         Move();
+        
 	}
     private void Move()
     {
