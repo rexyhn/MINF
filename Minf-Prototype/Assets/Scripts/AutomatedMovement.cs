@@ -11,7 +11,7 @@ public class AutomatedMovement : MonoBehaviour
     Rigidbody2D myBody;
     Transform myTrans;
     float myWidth, myHeight;
-
+    public bool moveallowed = true;
     void Start()
     {
         myTrans = this.transform;
@@ -42,14 +42,14 @@ public class AutomatedMovement : MonoBehaviour
             currRot.y += 180;
             myTrans.eulerAngles = currRot;
         }
-        
 
-        
-        
-        Vector2 myVel = myBody.velocity;
-        myVel.x = -myTrans.right.x * speed;
-        myBody.velocity = myVel;
-        
+
+
+        if (moveallowed) {
+            Vector2 myVel = myBody.velocity;
+            myVel.x = -myTrans.right.x * speed;
+            myBody.velocity = myVel;
+        }
     }
    
 }
