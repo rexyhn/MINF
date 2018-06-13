@@ -43,11 +43,11 @@ public class AutomatedMovement : MonoBehaviour
        
 
     
-        Vector2 lineCastPos = myTrans.position.toVector2() - myTrans.right.toVector2() * (myWidth*0.9f) + Vector2.up * myHeight;
+        Vector2 lineCastPos = myTrans.position.toVector2() - myTrans.right.toVector2() * (myWidth*0.65f) + Vector2.up * myHeight;
         
-        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down* myHeight*3, Color.red,0.5f);
+        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down* myHeight*3.5f, Color.red,0.5f);
      
-        bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down* myHeight*3, enemyMask);
+        bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down* myHeight*3.5f, enemyMask);
       
         Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f,Color.yellow,0.1f);
         bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, enemyMask);
