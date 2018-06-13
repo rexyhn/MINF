@@ -4249,7 +4249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &626965533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8804,7 +8804,7 @@ MonoBehaviour:
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/Test.xml
-  mExtendedTracking: 0
+  mExtendedTracking: 1
   mAspectRatio: 1.405628
   mImageTargetType: 0
   mWidth: 7.114258
@@ -9266,7 +9266,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1396104315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.93}
+  m_LocalPosition: {x: 0, y: 0, z: -8.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
