@@ -8,11 +8,13 @@ public class PlatformMovement : MonoBehaviour {
     private Vector3 posB;
     private Vector3 nexPos;
     [SerializeField]
-    private float platformSpeed;
+    private float platformSpeed,prevDistance;
     [SerializeField]
     private Transform childTransform;
     [SerializeField]
     private Transform transformB;
+    public bool moveAllowed =true;
+    private float speed;
 	// Use this for initialization
 	void Start () {
         posA = childTransform.localPosition;
@@ -21,22 +23,53 @@ public class PlatformMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         Vector3 pos = Camera.main.transform.position;
         float distance = pos.magnitude;
-        Debug.Log(distance);
-        platformSpeed = distance * 0.1f;
+        //Debug.Log(distance);
+        //platformSpeed = distance * 0.1f;
+         if (distance != prevDistance)
+        {
+            speed = platformSpeed;
+        }
+        else
+        {
+            speed=0;
+        }
+
+        if (moveAllowed)
+        {
+            Move();
+        }
+         prevDistance = distance;
+         
+       
+    }
+    
+    private void Update()
+    {
+       
         Move();
-        
-	}
+    }
     private void Move()
     {
-        childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, nexPos, platformSpeed * Time.deltaTime);
-        if (Vector3.Distance(childTransform.localPosition, nexPos) <= 0.001) {
+        childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, nexPos, speed * Time.deltaTime);
+        if (Vector3.Distance(childTransform.localPosition, nexPos) <= 0.0001) {
+           //StartCoroutine("Wait");
             changeDestination();
         }
     }
     private void changeDestination() {
         nexPos = nexPos != posA ? posA : posB;
+    }
+    IEnumerator Wait()
+    {
+        Debug.Log("start");
+
+        moveAllowed = false;
+        yield return new WaitForSeconds(1f);
+        Debug.Log("end");
+        moveAllowed = true;
+        
     }
 }

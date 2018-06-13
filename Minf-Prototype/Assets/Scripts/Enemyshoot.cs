@@ -6,7 +6,7 @@ public class Enemyshoot : MonoBehaviour {
     public GameObject projectile;
     public Transform shootpoint;
    public  float timer;
-   public  int waitingTime  =3;
+   public  float waitingTime  =1;
     public Transform parent;
     // Use this for initialization
     void Start () {

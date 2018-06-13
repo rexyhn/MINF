@@ -1,11 +1,16 @@
 fileFormatVersion: 2
-guid: 3054ae48de2f76845a220376cd551bfa
-timeCreated: 1528903351
+guid: 67ecb808c8392af4499494431e9beb29
+timeCreated: 1528902556
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: EnemyPrototype_Layer 0_0
-    21300002: EnemyPrototype_Layer 0_1
+    21300000: chestopen
+    21300002: chest
+    21300004: FertigeTiles 1_0
+    21300006: FertigeTiles 1_1
+    21300008: FertigeTiles 1_2
+    21300010: FertigeTiles 1_3
+    21300012: FertigeTiles 1_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -93,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyPrototype_Layer 0_0
+      name: chestopen
       rect:
         serializedVersion: 2
-        x: 400
-        y: 480
-        width: 80
-        height: 80
+        x: 820
+        y: 400
+        width: 130
+        height: 110
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,13 +112,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: EnemyPrototype_Layer 0_1
+      name: chest
       rect:
         serializedVersion: 2
-        x: 20
-        y: 420
-        width: 41
-        height: 30
+        x: 830
+        y: 560
+        width: 130
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FertigeTiles 1_0
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 250
+        width: 160
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FertigeTiles 1_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 110
+        width: 380
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FertigeTiles 1_2
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 100
+        width: 160
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FertigeTiles 1_3
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 100
+        width: 400
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FertigeTiles 1_4
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 100
+        width: 420
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
