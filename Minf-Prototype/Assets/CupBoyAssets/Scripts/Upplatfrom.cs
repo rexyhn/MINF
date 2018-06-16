@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Upplatfrom : MonoBehaviour {
     public GameObject player;
-    private Vector3 posA;
+    
     private Vector3 posB;
     private Vector3 nexPos;
     [SerializeField]
@@ -17,7 +17,7 @@ public class Upplatfrom : MonoBehaviour {
     public bool move = false;
     void Start()
     {
-        posA = childTransform.localPosition;
+        
         posB = transformB.localPosition;
         nexPos = posB;
     }

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour {
-    public int number = 0;
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private int number = 0;
+    [SerializeField]
+    private GameObject player;
+    void Start () {
 		
 	}
 	
@@ -16,7 +18,7 @@ public class Checkpoint : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        collision.GetComponent<AutomatedMovement>().Stage = number;
+        player.GetComponent<AutomatedMovement>().Stage = number;
         
     }
 }

@@ -10,15 +10,14 @@ public class Bullet : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        //direction = this.transform.rotation * Vector3.forward;
+       
         StartCoroutine("Wait");
     }
 
 
     void FixedUpdate()
     {
-        //this.transform.Translate(direction* Time.deltaTime * travelspeed);
-        // transform.position += transform.forward * Time.deltaTime * travelspeed;
+       
 
         transform.Translate(Vector3.right * Time.deltaTime * travelspeed);
 
@@ -32,11 +31,11 @@ public class Bullet : MonoBehaviour {
     }
     IEnumerator Wait()
     {
-        Debug.Log("start");
+
        
   
         yield return new WaitForSeconds(3f);
-        Debug.Log("end");
+      
         Destroy(this.gameObject);
     }
 }
