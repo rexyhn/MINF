@@ -14,6 +14,7 @@ public class PlatformMovement : MonoBehaviour {
     [SerializeField]
     private Transform transformB;
     public bool moveAllowed =true;
+    public bool maxreach = false;
     private float speed;
 	// Use this for initialization
 	void Start () {
@@ -44,7 +45,6 @@ public class PlatformMovement : MonoBehaviour {
         {
             Move();
         }
-         prevDistance = distance;
          
        
     }
@@ -60,6 +60,7 @@ public class PlatformMovement : MonoBehaviour {
         if (Vector3.Distance(childTransform.localPosition, nexPos) <= 0.0001) {
            //StartCoroutine("Wait");
             changeDestination();
+            maxreach = true;
         }
     }
     private void changeDestination() {

@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Prototype.unity
-    guid: 5fcd54c6e2672fb4e90e7ce62de05d7c
+    path: Assets/CupBoyAssets/CupBoy.unity
+    guid: 8a5692584b8be9041aa1b579e0d6453e
