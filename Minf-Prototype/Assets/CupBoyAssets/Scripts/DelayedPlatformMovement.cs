@@ -30,10 +30,12 @@ public class DelayedPlatformMovement : MonoBehaviour {
     {
         Vector3 pos = Camera.main.transform.position;
         float distance = pos.magnitude;
-  
-        if (distance != prevDistance)
+        float dif = Mathf.Abs(prevDistance - distance);
+       // Debug.Log(dif);
+        if (dif > 0.004f)//distance != prevDistance)
         {
             speed = platformSpeed;
+            Debug.Log("yay");
         }
         else
         {

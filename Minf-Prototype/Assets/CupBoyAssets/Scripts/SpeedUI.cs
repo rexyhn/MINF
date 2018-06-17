@@ -16,8 +16,8 @@ public class SpeedUI : MonoBehaviour {
 	void Update () {
         Vector3 pos = Camera.main.transform.position;
         float distance = pos.magnitude;
-        Debug.Log(distance);
-        platformSpeed = distance * 0.1f;
+       // Debug.Log(distance);
+        platformSpeed = distance ;
         textfield.text=("Speed:" +platformSpeed);
     }
 }
