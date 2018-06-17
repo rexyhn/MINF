@@ -45,8 +45,8 @@ public class PlatformMovement : MonoBehaviour {
         {
             Move();
         }
-         
-       
+        prevDistance = distance;
+
     }
     
     private void Update()
