@@ -4808,7 +4808,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 256
-  speed: 0.2
+  speed: 0.18
   moveallowed: 0
   stage: 0
   checkpoint1: {fileID: 896867734}
@@ -4909,7 +4909,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855988999}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.191, y: -0, z: 0.21}
+  m_LocalPosition: {x: 0.2643, y: -0, z: -0.2286}
   m_LocalScale: {x: 0.03, y: 0.030000014, z: 0.10000009}
   m_Children: []
   m_Father: {fileID: 348952574}
