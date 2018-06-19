@@ -17,8 +17,9 @@ public class Checkpoint : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        player.GetComponent<AutomatedMovement>().Stage = number;
-        
+        if(collision.gameObject.tag.Equals("CupBoy"))
+        {
+            player.GetComponent<AutomatedMovement>().Stage = number;
+        }
     }
 }

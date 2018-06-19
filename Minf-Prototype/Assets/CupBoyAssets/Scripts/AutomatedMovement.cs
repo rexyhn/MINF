@@ -11,9 +11,9 @@ public class AutomatedMovement : MonoBehaviour
     Rigidbody2D myBody;
     Transform myTrans;
     float myWidth, myHeight;
-    public bool moveallowed = true;
-    private int stage = 0;
-    public GameObject checkppoint1, checkpoint2;
+    public bool moveallowed = false;
+    public int stage = 0;
+    public GameObject checkpoint1, checkpoint2;
     private GameObject target;
 
     public int Stage
@@ -31,11 +31,13 @@ public class AutomatedMovement : MonoBehaviour
 
     void Start()
     {
+        
         myTrans = this.transform;
         myBody = this.GetComponent<Rigidbody2D>();
         SpriteRenderer mySprite = this.GetComponent<SpriteRenderer>();
         myWidth = mySprite.bounds.extents.x;
         myHeight = mySprite.bounds.extents.y;
+        StartCoroutine("Wait");
     }
 
     void FixedUpdate()
@@ -81,13 +83,22 @@ public class AutomatedMovement : MonoBehaviour
     public void SetToCheckpoint() {
         switch (stage) {
             case 1:
-                target = checkppoint1;
+                target = checkpoint1;
                     break;
             case 2:
                 target = checkpoint2;
                 break;
         }
-        this.transform.position = new Vector2(target.transform.position.x, target.transform.position.y);
+        transform.position = new Vector2(target.transform.position.x, target.transform.position.y);
+    }
+    IEnumerator Wait()
+    {
+
+
+
+        yield return new WaitForSeconds(2f);
+        moveallowed=true;
+        
     }
 
 }

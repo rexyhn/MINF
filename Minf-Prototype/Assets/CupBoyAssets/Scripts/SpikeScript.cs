@@ -17,6 +17,9 @@ public class SpikeScript : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        player.GetComponent<AutomatedMovement>().SetToCheckpoint();
+        if (collision.gameObject.tag.Equals("CupBoy"))
+        {
+            player.GetComponent<AutomatedMovement>().SetToCheckpoint();
+        }
     }
 }

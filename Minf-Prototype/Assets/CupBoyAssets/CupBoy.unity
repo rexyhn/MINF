@@ -2616,7 +2616,6 @@ GameObject:
   m_Component:
   - component: {fileID: 945679715}
   - component: {fileID: 945679714}
-  - component: {fileID: 945679713}
   - component: {fileID: 945679716}
   m_Layer: 8
   m_Name: PlatformExtension
@@ -2625,31 +2624,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &945679713
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 945679712}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &945679714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4798,7 +4772,7 @@ GameObject:
   - component: {fileID: 1855989003}
   m_Layer: 0
   m_Name: Char
-  m_TagString: Untagged
+  m_TagString: CupBoy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4835,8 +4809,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   speed: 0.2
-  moveallowed: 1
-  checkppoint1: {fileID: 896867734}
+  moveallowed: 0
+  stage: 0
+  checkpoint1: {fileID: 896867734}
   checkpoint2: {fileID: 235133019}
 --- !u!50 &1855989002
 Rigidbody2D:
@@ -4934,7 +4909,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855988999}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.255, y: 0, z: -0.24000005}
+  m_LocalPosition: {x: -0.191, y: -0, z: 0.21}
   m_LocalScale: {x: 0.03, y: 0.030000014, z: 0.10000009}
   m_Children: []
   m_Father: {fileID: 348952574}
